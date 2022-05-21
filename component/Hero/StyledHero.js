@@ -19,6 +19,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  background-color: ${props=>props.primary? "#ff6f1d":""};
 `;
 
 export const NavAccountContainer = styled.div`
@@ -27,7 +28,7 @@ export const NavAccountContainer = styled.div`
 `;
 
 export const Logo = styled.h2`
-  color: #ff6f1d;
+  color:  ${props=>props.primary? "white":"#ff6f1d"};
   font-size: 1.8rem;
   font-weight: bolder;
 `;
