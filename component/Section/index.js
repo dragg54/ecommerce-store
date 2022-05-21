@@ -24,7 +24,7 @@ const Section = () => {
       <ImageContainer>
         <Image src={Women} width={300} height={400} alt="image" />
         <ImageNumber>2</ImageNumber>
-        <Link href="">
+        <Link href=".../../Women" passHref>
           <ImageCaption>WOMEN</ImageCaption>
         </Link>
       </ImageContainer>
