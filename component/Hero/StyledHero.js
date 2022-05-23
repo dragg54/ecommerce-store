@@ -62,6 +62,7 @@ export const HeroCaptionContainer = styled.div`
   @media (max-width: 600px){
       width: 100%;
       height: 100%;
+      padding: 20px;
   }
 
   @media(max-width: 768px){
@@ -100,8 +101,26 @@ export const PrimaryButton = styled.button`
 
   @media(max-width: 640px){
       font-size: 0.5rem;
-      width: 200px;
+      width: 150px;
       padding: 12px 12px;
       margin-bottom: 200px;
   }
 `;
+
+export const NoOfCartedProducts = styled.p`
+  font-size: 8px;
+  position: absolute;
+  color: ${props=>props.primary? "orange": "white"};
+  top: -14px;
+  right: -2px;
+  font-weight: bolder;
+  color: white;
+  padding: 1px 5px;
+  background-color: ${props=>props.primary? "orange": "orange"};
+  border-radius: 100%;
+`
+
+export const CartLogo = styled.div`
+  position: relative;
+  font-size: 20px;
+`
