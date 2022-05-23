@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ImageContainer = styled.div`
   width: ${(props) => (props.primary ? "200px" : "300px")};
-  height: ${(props) => (props.primary ? "450px" : "700px")};
+  height: ${(props) => (props.primary ? "450px" : "470px")};
   cursor: pointer;
 
   @media (max-width: 990px) {
@@ -20,8 +20,14 @@ export const ImageSection = styled.div`
 
 
   @media (max-width: 990px) {
-    padding: 40px 20px;
-    justify-content: space-between;
+    padding: 40px 50px;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  @media(max-width: 768px ){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
   }
 `;
 
