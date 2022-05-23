@@ -1,3 +1,4 @@
+import React,{useState, useEffect} from "react";
 import Image from "next/image";
 import {
   ImageCaption,
@@ -10,6 +11,8 @@ import {
   Logo,
   NavList,
   NavElements,
+  CartLogo,
+  NoOfCartedProducts,
 } from "../../component/Hero/StyledHero";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
 import {
@@ -19,6 +22,30 @@ import {
 } from "../Women/StyledWomenComponent";
 
 function menPage({ products }) {
+  const [localProducts, setLocalProducts ] = useState([])
+  const[product, setProduct] = useState([])
+
+   useEffect(()=>{
+       if(product){
+         const localProduct = JSON.parse(localStorage.getItem("storedProducts"))
+         console.log(localProduct)
+         setLocalProducts(localProduct)
+       }
+     else{
+       setLocalProducts([])
+     }},[product])
+
+ const handleItems=(product)=>{
+  setProduct(product)
+  if(localProducts){
+    localStorage.setItem("storedProducts",JSON.stringify([...localProducts,product])) 
+  }
+  else{
+    localStorage.setItem("storedProducts",JSON.stringify([product])) 
+  }
+}
+  
+
   return (
     <>
       <HeaderContainer primary>
@@ -38,7 +65,10 @@ function menPage({ products }) {
             <FiSearch />
           </NavElements>
           <NavElements>
-            <FiShoppingBag />
+            <CartLogo>
+              <FiShoppingBag />
+              <NoOfCartedProducts>{localProducts? localProducts.length : 0}</NoOfCartedProducts>
+            </CartLogo>
           </NavElements>
         </NavList>
       </HeaderContainer>
@@ -47,8 +77,8 @@ function menPage({ products }) {
           {products.map((product) => {
             if (product.category === "men's clothing") {
               return (
-                <ProductContainer>
-                  <ImageContainer primary key={product.id}>
+                <ProductContainer key={product.id}>
+                  <ImageContainer primary>
                     <Image
                       src={product.image}
                       width={200}
@@ -64,7 +94,7 @@ function menPage({ products }) {
                       }`}
                       <ImageCaption>${product.price}</ImageCaption>
                     </ImageCaption>
-                    <CartButton>ADD TO CART</CartButton>
+                    <CartButton onClick={()=>handleItems(product)}>ADD TO CART</CartButton>
                   </ImageContainer>
                 </ProductContainer>
               );
