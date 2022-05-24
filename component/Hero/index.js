@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { BsCart3 } from "react-icons/bs";
 
 import {
   CartLogo,
@@ -44,7 +45,7 @@ function Header() {
           </NavElements>
           <NavElements>
             <CartLogo>
-              <FiShoppingBag />
+              <BsCart3 />
               <NoOfCartedProducts primary>
                 {localProducts? localProducts.length: 0}
               </NoOfCartedProducts>
