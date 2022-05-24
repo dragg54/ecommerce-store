@@ -45,3 +45,16 @@ export const ImageNumber = styled.p`
   font-size: 12px;
   font-weight: bolder;
 `;
+
+export const LinerContainer = styled.div`
+  width: 100%;
+  padding:0 100px 0 100px;
+  margin-top: 50px;
+  
+`
+
+export const Liner = styled.div`
+width: 100%;
+height: 3px;
+background-color: #ff6f1d;
+`
