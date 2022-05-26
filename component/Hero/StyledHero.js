@@ -20,7 +20,13 @@ export const HeaderContainer = styled.div`
   align-items: center;
   padding: 16px;
   background-color: ${props=>props.primary? "#ff6f1d":""};
+
+  @media(max-width: 990px){
+    justify-content: flex-start;
+    padding: 10px 20px 14px 16px
+}
 `;
+
 
 export const NavAccountContainer = styled.div`
   display: flex;
@@ -31,6 +37,10 @@ export const Logo = styled.h2`
   color:  ${props=>props.primary? "white":"#ff6f1d"};
   font-size: 1.8rem;
   font-weight: bolder;
+
+  @media(max-width: 990px){
+    margin-right: auto ;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -39,16 +49,13 @@ export const NavList = styled.ul`
   justify-content: space-between;
   list-style: none;
   margin-right: 16px;
-
-  @media(max-width: 992px){
-      display: none;
-  }
 `;
 
 export const NavElements = styled.li`
   font-size: 1rem;
   color: white;
   margin-right: 16px;
+  list-style-type: none;
 `;
 
 export const HeroCaptionContainer = styled.div`
@@ -123,4 +130,32 @@ export const NoOfCartedProducts = styled.p`
 export const CartLogo = styled.div`
   position: relative;
   font-size: 20px;
+`
+export const MenuIcon = styled.div`
+  font-size: 1.6rem;
+  color: white;
+  margin-right: 8px;
+  display: none;
+
+  @media(max-width: 990px){
+    display: block
+  }
+`
+
+export const CartIcon = styled.div`
+  display: none;
+
+  @media(max-width: 990px){
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+  }
+`
+
+export const NavIcons = styled.div`
+  display: none;
+
+  @media(max-width: 990px){
+    display: flex;
+  }
 `
