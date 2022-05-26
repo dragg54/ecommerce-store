@@ -19,14 +19,14 @@ export const NewProductSection = styled.div `
 `
 
 export const NewProductImageContainer = styled.div`
-    width: 600px;
-    height: 700px;
+    width: 700px;
+    height: 900px;
     position: relative;
 `
 
 export const NewProducImgDecrContainer= styled.div`
-    width: 450px;
-    height: 900px;
+    width: 550px;
+    height: 700px;
 `
 
 export const DescrContainer = styled.div`
