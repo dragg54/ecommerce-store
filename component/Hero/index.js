@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FiSearch, FiMenu } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
 
 import {
+  CartIcon,
   CartLogo,
   HeaderContainer,
   HeroCaptionContainer,
@@ -10,7 +11,9 @@ import {
   HeroPrimaryCaption,
   HeroSecondaryCaption,
   Logo,
+  MenuIcon,
   NavElements,
+  NavIcons,
   NavList,
   NoOfCartedProducts,
   PrimaryButton,
@@ -28,7 +31,19 @@ function Header() {
   return (
     <HeroContainer>
       <HeaderContainer>
+        <MenuIcon><FiMenu /></MenuIcon>
         <Logo>ABC.</Logo>
+        <NavIcons> <NavElements>MY ACCOUNT</NavElements>
+        <NavElements>
+          <FiSearch />
+        </NavElements>
+        <CartIcon><CartLogo>
+        <BsCart3 />
+        <NoOfCartedProducts primary>
+          {localProducts? localProducts.length: 0}
+        </NoOfCartedProducts>
+      </CartLogo></CartIcon></NavIcons>
+       
         <NavList>
           <NavElements>MEN</NavElements>
           <NavElements>WOMEN</NavElements>
