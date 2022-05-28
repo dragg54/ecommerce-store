@@ -23,14 +23,14 @@ function NewProduct() {
       <Header>NEW PRODUCT</Header>
       <NewProductSection>
         <NewProductImageContainer>
-          <Image src={New} width={700} height={900} alt="img" />
+          <Image src={New} layout='responsive' alt="img" />
           <NewInContainer>
             <NewInCaption>NEW IN</NewInCaption>
           </NewInContainer>
           <NewProductName>bleak</NewProductName>
         </NewProductImageContainer>
         <NewProducImgDecrContainer>
-          <Image src={Coco} width={550} height={700} />
+          <Image src={Coco} width={550} height={600} />
           <DescrContainer>
             <DescrHeader>DESCRIPTION</DescrHeader>
             <Desc>
