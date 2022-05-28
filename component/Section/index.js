@@ -20,7 +20,7 @@ const Section = () => {
     <>
       <ImageSection>
         <ImageContainer>
-          <Image src={Men} width='400px' height='500px' alt="image" />
+          <Image src={Men} width={400} height={500} alt="image" />
           <ImageNumber>1</ImageNumber>
           <Link href=".../../Men" passHref>
             <ImageCaption>MEN</ImageCaption>
@@ -40,9 +40,9 @@ const Section = () => {
             <ImageCaption>ACCESSORIES</ImageCaption>
           </Link>
         </ImageContainer>
-        <ImageContainer>
+        <ImageContainer lastChild>
         <Image src={Gadgets} width={400} height={500} alt="image" />
-        <ImageNumber>3</ImageNumber>
+        <ImageNumber>4</ImageNumber>
         <Link href="">
           <ImageCaption>GADGETS</ImageCaption>
         </Link>
