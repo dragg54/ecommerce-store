@@ -20,30 +20,36 @@ import {
 } from "./StyledHero";
 
 function Header() {
-  const[localProducts, setLocalProducts] = useState([])
+  const [localProducts, setLocalProducts] = useState([]);
 
-  useEffect(()=>{
-    const localProducts = JSON.parse(localStorage.getItem("storedProducts"))
-      if(localProducts){
-        setLocalProducts(localProducts)
-      }
-  },[]) 
+  useEffect(() => {
+    if (localProducts) {
+      const localProducts = JSON.parse(localStorage.getItem("storedProducts"));
+      setLocalProducts(localProducts);
+    }
+  }, []);
   return (
     <HeroContainer>
       <HeaderContainer>
-        <MenuIcon><FiMenu /></MenuIcon>
+        <MenuIcon>
+          <FiMenu />
+        </MenuIcon>
         <Logo>ABC.</Logo>
-        <NavIcons> <NavElements>MY ACCOUNT</NavElements>
-        <NavElements>
-          <FiSearch />
-        </NavElements>
-        <CartIcon><CartLogo>
-        <BsCart3 />
-        <NoOfCartedProducts primary>
-          {localProducts? localProducts.length: 0}
-        </NoOfCartedProducts>
-      </CartLogo></CartIcon></NavIcons>
-       
+        <NavIcons>
+          {" "}
+          <NavElements>MY ACCOUNT</NavElements>
+          <NavElements>
+            <FiSearch />
+          </NavElements>
+          <CartIcon>
+            <CartLogo>
+              <BsCart3 />
+              <NoOfCartedProducts primary>
+                {localProducts ? localProducts.length : 0}
+              </NoOfCartedProducts>
+            </CartLogo>
+          </CartIcon>
+        </NavIcons>
         <NavList>
           <NavElements>MEN</NavElements>
           <NavElements>WOMEN</NavElements>
@@ -62,7 +68,7 @@ function Header() {
             <CartLogo>
               <BsCart3 />
               <NoOfCartedProducts primary>
-                {localProducts? localProducts.length: 0}
+                {localProducts ? localProducts.length : 0}
               </NoOfCartedProducts>
             </CartLogo>
           </NavElements>
