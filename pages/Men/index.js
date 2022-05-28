@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   ImageCaption,
@@ -13,43 +13,66 @@ import {
   NavElements,
   CartLogo,
   NoOfCartedProducts,
+  MenuIcon,
+  NavIcons,
+  CartIcon,
 } from "../../component/Hero/StyledHero";
-import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FiMenu, FiSearch, FiShoppingBag } from "react-icons/fi";
 import {
   CartButton,
   ImageWrapper,
   ProductContainer,
 } from "../Women/StyledWomenComponent";
+import { BsCart3 } from "react-icons/bs";
 
 function menPage({ products }) {
-  const [localProducts, setLocalProducts ] = useState([])
-  const[product, setProduct] = useState([])
+  const [localProducts, setLocalProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
-   useEffect(()=>{
-       if(product){
-         const localProduct = JSON.parse(localStorage.getItem("storedProducts"))
-         console.log(localProduct)
-         setLocalProducts(localProduct)
-       }
-     else{
-       setLocalProducts([])
-     }},[product])
+  useEffect(() => {
+    if (product) {
+      const localProduct = JSON.parse(localStorage.getItem("storedProducts"));
+      console.log(localProduct);
+      setLocalProducts(localProduct);
+    } else {
+      setLocalProducts([]);
+    }
+  }, [product]);
 
- const handleItems=(product)=>{
-  setProduct(product)
-  if(localProducts){
-    localStorage.setItem("storedProducts",JSON.stringify([...localProducts,product])) 
-  }
-  else{
-    localStorage.setItem("storedProducts",JSON.stringify([product])) 
-  }
-}
-  
+  const handleItems = (product) => {
+    setProduct(product);
+    if (localProducts) {
+      localStorage.setItem(
+        "storedProducts",
+        JSON.stringify([...localProducts, product])
+      );
+    } else {
+      localStorage.setItem("storedProducts", JSON.stringify([product]));
+    }
+  };
 
   return (
     <>
       <HeaderContainer primary>
+        <MenuIcon>
+          <FiMenu />
+        </MenuIcon>
         <Logo primary>ABC.</Logo>
+        <NavIcons>
+          {" "}
+          <NavElements>MY ACCOUNT</NavElements>
+          <NavElements>
+            <FiSearch />
+          </NavElements>
+          <CartIcon>
+            <CartLogo>
+              <BsCart3 />
+              <NoOfCartedProducts primary>
+                {localProducts ? localProducts.length : 0}
+              </NoOfCartedProducts>
+            </CartLogo>
+          </CartIcon>
+        </NavIcons>
         <NavList>
           <NavElements>MEN</NavElements>
           <NavElements>WOMEN</NavElements>
@@ -67,7 +90,9 @@ function menPage({ products }) {
           <NavElements>
             <CartLogo>
               <FiShoppingBag />
-              <NoOfCartedProducts>{localProducts? localProducts.length : 0}</NoOfCartedProducts>
+              <NoOfCartedProducts>
+                {localProducts ? localProducts.length : 0}
+              </NoOfCartedProducts>
             </CartLogo>
           </NavElements>
         </NavList>
@@ -77,26 +102,26 @@ function menPage({ products }) {
           {products.map((product) => {
             if (product.category === "men's clothing") {
               return (
-                <ProductContainer key={product.id}>
-                  <ImageContainer primary>
-                    <Image
-                      src={product.image}
-                      width={200}
-                      height={300}
-                      alt="image"
-                    />
-                    <ImageNumber>{product.category}</ImageNumber>
-                    <ImageCaption primary>
-                      {`${
-                        product.title.length > 20
-                          ? product.title.substring(0, 30) + "..."
-                          : product.title
-                      }`}
-                      <ImageCaption>${product.price}</ImageCaption>
-                    </ImageCaption>
-                    <CartButton onClick={()=>handleItems(product)}>ADD TO CART</CartButton>
-                  </ImageContainer>
-                </ProductContainer>
+                <ImageContainer primary key={product.id}>
+                  <Image
+                    src={product.image}
+                    width={200}
+                    height={280}
+                    alt="image"
+                  />
+                  <ImageNumber>{product.category}</ImageNumber>
+                  <ImageCaption primary>
+                    {`${
+                      product.title.length > 30
+                        ? product.title.substring(0, 20) + "..."
+                        : product.title
+                    }`}
+                    <ImageCaption>${product.price}</ImageCaption>
+                  </ImageCaption>
+                  <CartButton onClick={() => handleItems(product)}>
+                    ADD TO CART
+                  </CartButton>
+                </ImageContainer>
               );
             }
           })}

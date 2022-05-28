@@ -14,13 +14,17 @@ import {
   NavElements,
   CartLogo,
   NoOfCartedProducts,
+  MenuIcon,
+  NavIcons,
+  CartIcon,
 } from "../../component/Hero/StyledHero";
-import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import { FiMenu, FiSearch, FiShoppingBag } from "react-icons/fi";
 import {
   CartButton,
   ImageWrapper,
   ProductContainer,
 } from "./StyledWomenComponent";
+import { BsCart3 } from "react-icons/bs";
 
 function menPage({ products }) {
   const [noOfProdCarted, setNoOfProductCarted] = useState();
@@ -52,7 +56,25 @@ function menPage({ products }) {
   return (
     <>
       <HeaderContainer primary>
+        <MenuIcon>
+          <FiMenu />
+        </MenuIcon>
         <Logo primary>ABC.</Logo>
+        <NavIcons>
+          {" "}
+          <NavElements>MY ACCOUNT</NavElements>
+          <NavElements>
+            <FiSearch />
+          </NavElements>
+          <CartIcon>
+            <CartLogo>
+              <BsCart3 />
+              <NoOfCartedProducts primary>
+                {localProducts ? localProducts.length : 0}
+              </NoOfCartedProducts>
+            </CartLogo>
+          </CartIcon>
+        </NavIcons>
         <NavList>
           <NavElements>MEN</NavElements>
           <NavElements>WOMEN</NavElements>
@@ -82,12 +104,11 @@ function menPage({ products }) {
           {products.map((product) => {
             if (product.category === "women's clothing") {
               return (
-                <ProductContainer>
                   <ImageContainer primary key={product.id}>
                     <Image
                       src={product.image}
                       width={200}
-                      height={300}
+                      height={280}
                       alt="image"
                     />
                     <ImageNumber>{product.category}</ImageNumber>
@@ -103,7 +124,7 @@ function menPage({ products }) {
                       ADD TO CART
                     </CartButton>
                   </ImageContainer>
-                </ProductContainer>
+              
               );
             }
           })}

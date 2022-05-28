@@ -12,7 +12,7 @@ export const CartButton = styled.button`
     padding: 8px 0 8px 0;
     font-size: 15px;
     font-weight: bolder;
-    background-color: #ff6f1d;
+    background-color: #FF281B;
     color: white;
     border: none;
     margin-bottom: 0;
@@ -24,9 +24,24 @@ export const CartButton = styled.button`
         visibility: visible;
     }
 
+    @media(max-width: 900px){
+        visibility: visible;
+        padding: 8px
+  }
+
+  @media(max-width: 600px){
+        visibility: visible;
+        padding: 8px;
+        font-size:0.6rem
+  }
+
+
 `
 
 export const ProductContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+   @media(max-width: 1200px){
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
 `
