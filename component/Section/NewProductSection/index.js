@@ -22,7 +22,7 @@ function NewProduct() {
     <NewProductContainer>
       <Header>NEW PRODUCT</Header>
       <NewProductSection>
-        <NewProductImageContainer>
+        <NewProductImageContainer primary>
           <Image src={New} layout='responsive' alt="img" />
           <NewInContainer>
             <NewInCaption>NEW IN</NewInCaption>
