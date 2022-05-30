@@ -8,6 +8,13 @@ export const NewProductContainer = styled.div`
 
     @media(max-width: 1080px){
         padding: 30px 20px;
+        margin-bottom: 90px;
+    }
+
+    
+    @media(max-width: 900px){
+       margin-top: 10px;
+       margin-bottom: 20px
     }
 
 `
@@ -17,6 +24,10 @@ export const Header = styled.div`
 
     @media(max-width:600px){
         font-size: 2.0rem;
+    }
+
+    @media(max-width:468px){
+       font-size: 1.8rem
     }
 `
 
@@ -44,11 +55,16 @@ export const NewProductImageContainer = styled.div`
     width: 700px;
     position: relative;
     margin-right: 100px;
+    align-self: ${props=>props.primary? "right": ""};
+
+    @media(max-width:900px){
+        margin-right: 60px;
+    }
 
     @media(max-width:600px){
         width: 80%;
         margin-right: 0px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 `
 
@@ -58,13 +74,19 @@ export const NewProducImgDecrContainer= styled.div`
 
     @media(max-width:600px){
         width: 100%;
+        margin-bottom: 200px;
     }
+    @media(max-width:468px){
+        margin-bottom: 20px;
+    }
+
 `
 
 export const DescrContainer = styled.div`
     width: 100%;
-    padding: 20px 0 20px 0;
+    padding: 20px 7px 20px 7px;
     margin-top: 10px;
+    background-color: #EEEDE7;
 `
 
 export const DescrHeader = styled.h4`
@@ -81,8 +103,14 @@ export const DescrHeader = styled.h4`
 `
 
 export const Desc = styled.p`
-    font-size: 0.65rem;
+    font-size: 0.86rem;
     margin-top: 0;
+
+    @media(max-width: 1080px){
+        font-size:0.7rem;
+    }
+    @media(max-width: 900px){
+        font-size:0.65rem;
 `
 
 export const NewInContainer = styled.div`
@@ -91,9 +119,10 @@ export const NewInContainer = styled.div`
     border: 2px  solid #FF281B ;
     position: absolute;
     border-radius: 50%;
-    top:35%;
-    bottom:50%;
-    right: -100px;
+    top:${props=>props.primary? "10%": "35%"};
+    bottom:${props=>props.primary? "": "50%"};
+    right: ${props=>props.primary? "": "-100px"};
+    left:${props=>props.primary? "-100%": ""};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,26 +160,46 @@ export const NewInCaption = styled.p`
 
 export const NewProductName = styled.h1`
     color:  #FF281d;
-    font-size: 160px;
+    font-size: 230px;
     font-weight: bolder;
     position: absolute;
-    bottom: -220px;
-    left: -50px;
+    bottom:${props=>props.primary? "": "-310px"};
+    top:${props=>props.primary? "-340px": ""};
+    left:${props=>props.primary? "": "-50px"};
+    right: ${props=>props.primary? "-250px": ""};
 
-    @media(max-width:1180px){
-        bottom:-190px;
-        font-size:140px;
-        left: -20px
+    @media(max-width:1200px){
+        bottom:${props=>props.primary? "": "-250px"};
+        font-size:190px;
+        left:${props=>props.primary? "": "-20px"};
+        right: ${props=>props.primary? "-200px": ""};
+        top:${props=>props.primary? "-290px": ""};
     }
 
+    @media(max-width: 1080px){
+        right: ${props=>props.primary? "-250px": ""};
+    }
+
+
+
     @media(max-width: 900px){
-        left: -20px
+        bottom:${props=>props.primary? "": "-200px"};
+        font-size:160px;
+        left:${props=>props.primary? "": "-20px"};
+        right: ${props=>props.primary? "-255px": ""};
+        top:${props=>props.primary? "-240px": ""};
     }
 
     @media(max-width: 600px){
-        left: -2px;
-        font-size: 80px;
-        bottom: -110px;
+        left:${props=>props.primary? "": "-2px"};
+        font-size: 120px;
+        right: ${props=>props.primary? "-90px": ""};
+        bottom:${props=>props.primary? "": "-160px"};
+        top:${props=>props.primary? "-170px": ""};
+
+        @media(max-width:468px){
+            right: ${props=>props.primary? "-70px": ""};
+    }
     }
 
 `
