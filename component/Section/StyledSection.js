@@ -13,11 +13,14 @@ export const ImageContainer = styled.div`
     width: 220px;
   }
 
-  @media(max-width: 600px){
+  @media(max-width: 768px){
     height: 250px;
     width: 170px;
     margin-bottom: 0;
   }
+
+  @media(max-width: 600px){
+        height:200px;
 
   @media(max-width: 480px){
     height: 140px;
@@ -55,7 +58,7 @@ export const ImageSection = styled.div`
   }
 
   @media(max-width: 768px){
-    padding: 40px 30px 40px 30px;
+    padding: 40px 15px 40px 15px;
     column-gap: 10px
   }
 
@@ -109,10 +112,11 @@ export const ImageNumber = styled.p`
 export const LinerContainer = styled.div`
   width: 100%;
   padding: 0 95px 0 95px;
-  margin-top: 45px;
+  margin-top: 10px;
+  opacity: 0.6;
 
   @media (max-width: 1200px) {
-    margin-top: 80px;
+    margin-top: 70px;
     padding: 0 60px 0 60px
   }
 
@@ -129,11 +133,12 @@ export const LinerContainer = styled.div`
     }
   
   @media(max-width: 600px){
-    margin-top:40px
+    margin-top:0px
   }
 
   @media(max-width:468px){
-       padding: 0 10px;
+    margin-top: 30px;
+    padding: 0 10px;
     }
 
 
