@@ -14,6 +14,7 @@ import {
 } from "./StyledSection";
 import Link from "next/link";
 import NewProduct from "./NewProductSection";
+import BestPrice from "./BestPrice";
 
 const Section = () => {
   return (
@@ -52,6 +53,7 @@ const Section = () => {
         <Liner></Liner>
       </LinerContainer>
       <NewProduct/>
+      <BestPrice />
     </>
   );
 };
