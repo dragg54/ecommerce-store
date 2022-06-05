@@ -19,7 +19,7 @@ import {
 
 function NewProduct() {
   return (
-    <NewProductContainer>
+    <NewProductContainer primary>
       <Header>NEW PRODUCT</Header>
       <NewProductSection>
         <NewProductImageContainer primary>

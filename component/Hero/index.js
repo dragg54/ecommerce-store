@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiSearch, FiMenu } from "react-icons/fi";
 import { BsCart3 } from "react-icons/bs";
+import Link from "next/link";
 
 import {
   CartIcon,
@@ -41,14 +42,16 @@ function Header() {
           <NavElements>
             <FiSearch />
           </NavElements>
-          <CartIcon>
-            <CartLogo>
-              <BsCart3 />
-              <NoOfCartedProducts primary>
-                {localProducts ? localProducts.length : 0}
-              </NoOfCartedProducts>
-            </CartLogo>
-          </CartIcon>
+          <Link href="../../../Cart" passHref>
+            <CartIcon>
+              <CartLogo>
+                <BsCart3 />
+                <NoOfCartedProducts primary>
+                  {localProducts ? localProducts.length : 0}
+                </NoOfCartedProducts>
+              </CartLogo>
+            </CartIcon>
+          </Link>
         </NavIcons>
         <NavList>
           <NavElements>MEN</NavElements>
@@ -65,12 +68,14 @@ function Header() {
             <FiSearch />
           </NavElements>
           <NavElements>
+            <Link href="../../../Cart" passHref>
             <CartLogo>
               <BsCart3 />
               <NoOfCartedProducts primary>
                 {localProducts ? localProducts.length : 0}
               </NoOfCartedProducts>
             </CartLogo>
+            </Link>
           </NavElements>
         </NavList>
       </HeaderContainer>

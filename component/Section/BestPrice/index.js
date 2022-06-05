@@ -31,7 +31,7 @@ function BestPrice() {
         </NewProductImageContainer>
         <NewProducImgDecrContainer>
           <Image src={Shoe} width={550} height={600} />
-          <DescrContainer>
+          <DescrContainer primary>
             <DescrHeader>END. AND ADIDAS</DescrHeader>
             <Desc>
                 Following on from their recent football culture-inspired 'Three Bridges' capsule, END. and adidas join forces again, looking towards the world of ceramics

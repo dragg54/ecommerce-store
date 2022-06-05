@@ -1,8 +1,10 @@
 import styled from "styled-components";
-
+import { keyframes } from "styled-components";
 export const ImageContainer = styled.div`
   width: ${(props) => (props.primary ? "200px" : "350px")};
   height: ${(props) => (props.primary ? "450px" : "450px")};
+  display:${props=>props.secondary? "":""};
+  flex-direction: column;
   object-fit: contain;
   cursor: pointer;
   margin: 20px;
@@ -21,13 +23,13 @@ export const ImageContainer = styled.div`
 
   @media(max-width: 600px){
         height:200px;
-
+  }
   @media(max-width: 480px){
     height: 140px;
     width: 120px;
     margin: 0 4px;
   }
-`;
+`
 export const ImageSection = styled.div`
   display: ${(props) => (props.primary ? "grid" : "flex")};
   grid-template-columns: repeat(3, 1fr);
@@ -91,7 +93,7 @@ export const ImageCaption = styled.p`
 
 
   @media (max-width: 480px) {
-    height: ${(props) => (props.primary ? "40px" : "100px")};
+    height: ${(props) => (props.primary ? "40px" : "50px")};
     margin-bottom: 2px;
   }
 `;
@@ -111,34 +113,30 @@ export const ImageNumber = styled.p`
 
 export const LinerContainer = styled.div`
   width: 100%;
-  padding: 0 95px 0 95px;
-  margin-top: 10px;
+  margin-top: ${props=>props.secondary? "60px" : "10px"};
   opacity: 0.6;
 
   @media (max-width: 1200px) {
-    margin-top: 70px;
-    padding: 0 60px 0 60px
+    margin-top: ${props=>props.secondary? "150px" : "70px"};
   }
 
   @media(max-width: 1080px){
-    padding: 0 20px;
   }
 
   @media(max-width: 900px){
-    margin-top: 20px;
+   margin-top: ${props=>props.secondary? "80px" : "20px"};
   }
 
   @media(max-width:768px){
-        margin-top: 0px
+    margin-top: ${props=>props.secondary? "100px" : "0px"};
     }
   
   @media(max-width: 600px){
-    margin-top:0px
+    margin-top: ${props=>props.secondary? "130px" : "0px"};
   }
 
-  @media(max-width:468px){
-    margin-top: 30px;
-    padding: 0 10px;
+  @media(max-width:480px){
+    margin-top: ${props=>props.secondary? "125px" : "25px"};
     }
 
 

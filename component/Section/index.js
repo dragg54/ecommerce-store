@@ -15,6 +15,12 @@ import {
 import Link from "next/link";
 import NewProduct from "./NewProductSection";
 import BestPrice from "./BestPrice";
+import SpringSale from "./SpringSale";
+import Journal from "./Journal";
+import StayFeel from "./StayFeel";
+import Instagram from "./Instagram";
+import FooterPicture from "./FooterPicture";
+import Conclusion from "../Conclusion";
 
 const Section = () => {
   return (
@@ -54,6 +60,12 @@ const Section = () => {
       </LinerContainer>
       <NewProduct/>
       <BestPrice />
+      <SpringSale/>
+      <Journal/>
+      <StayFeel />
+      <Instagram />
+      <FooterPicture />
+      <Conclusion />
     </>
   );
 };

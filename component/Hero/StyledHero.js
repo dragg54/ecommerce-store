@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   width: 100%;
-  height: 800px;
+  height: 600px;
   background-image: url("../../images/unsplash.jpg");
   background-position: center;
   background-size: cover;
@@ -14,7 +14,7 @@ export const HeroContainer = styled.div`
 `;
 export const HeaderContainer = styled.div`
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,7 @@ export const HeaderContainer = styled.div`
   background-color: ${props=>props.primary? "#FF281B":""};
 
   @media(max-width: 1020px){
-    height: 90px;
+    height: 80px;
     padding: 10px 20px 5px 16px;
   }
 
@@ -69,7 +69,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavElements = styled.li`
-  font-size: 1rem;
+  font-size: 0.6rem;
   color: white;
   margin-right: 16px;
   list-style-type: none;
@@ -78,19 +78,19 @@ export const NavElements = styled.li`
   align-items:center;
 
   @media(max-width: 1020px){
-   font-size: 0.8rem;
+   font-size: 0.75rem;
   }
   
   @media(max-width: 468px){
-   font-size: 0.8rem;
+   font-size: 0.5rem;
   }
 
 `;
 
 export const HeroCaptionContainer = styled.div`
   width: 80%;
-  height: 600px;
-  padding: 50px;
+  height: 400px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,31 +107,31 @@ export const HeroCaptionContainer = styled.div`
 `;
 
 export const HeroPrimaryCaption = styled.h1`
-  font-size: 3.4rem;
+  font-size: 4.1rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   @media(max-width: 640px){
-    font-size: 2.4rem;
+    font-size: 3rem;
     margin-bottom: 0px
   }
 `;
 
 export const HeroSecondaryCaption = styled.p`
-  font-size: 1.2rem;
+  font-size: 0.7rem;
   color: white;
 
   @media(max-width: 640px){
-      font-size: 0.8rem;
+      font-size: 0.55rem;
   }
 `;
 
 export const PrimaryButton = styled.button`
-  font-size: 0.7rem;
-  padding: 18px 12px;
+  font-size: 0.55rem;
+  padding: 10px 6px;
   background-color: #FF281B;
-  width: 300px;
+  width: 80px;
   color: white;
   border: none;
 
@@ -149,6 +149,13 @@ export const PrimaryButton = styled.button`
       padding: 12px 12px;
       margin-bottom: 200px;
   }
+
+     
+  @media(max-width: 480px){
+    width: 120px;
+    padding: 10px;
+  }
+
 `;
 
 export const NoOfCartedProducts = styled.p`
