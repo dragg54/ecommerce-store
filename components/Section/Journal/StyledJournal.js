@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ImageCaption } from '../StyledSection'
 
 export const JournalContainer = styled.div`
     display: flex;
@@ -7,6 +8,7 @@ export const JournalContainer = styled.div`
     width: 100%;
     justify-content: space-between;
     background-color: #fff;
+    padding:0;
 
     
     @media(max-width: 900px){
@@ -29,7 +31,7 @@ align-items: flex-start;
     }
 
     @media(max-width:480px){
-        margin-top: -30px;
+        margin-top:${props=>props.secondary? "-40px":"55px"};
         }
 
 
@@ -39,9 +41,13 @@ export const StyledHeader = styled.h1`
     font-size: 1.5rem;
 
     @media(max-width: 768px){
-        font-size:${props=>props.secondary? "1.6rem": "2rem"}
+        font-size:${props=>props.secondary? "1.6rem": ""}
     }
     @media(max-width: 480px){
         font-size:${props=>props.secondary? "1.2rem": ""}
     }
+`
+
+export const JournalCaption = styled(ImageCaption)`
+    font-size: 0.8rem
 `

@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Footer from "../../components/Footer";
+import Image from "next/image";
 import {
   ImageCaption,
   ImageContainer,
@@ -17,22 +16,22 @@ import {
   MenuIcon,
   NavIcons,
   CartIcon,
-  Input,
-  SearchContainer,
   InputContainer,
+  SearchContainer,
+  Input,
 } from "../../components/Hero/StyledHero";
-import { FiMenu, FiSearch } from "react-icons/fi";
+import { FiMenu, FiSearch, FiShoppingBag } from "react-icons/fi";
 import {
   CartButton,
   ImageWrapper,
-} from "./StyledWomenComponent";
+  ProductContainer,
+} from "../Women/StyledWomenComponent";
 import { BsCart3 } from "react-icons/bs";
-import { FaUser, FaStar, FaStarHalfAlt  } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import Footer from "../../components/Footer";
 import Link from "next/link";
-import { Ratings } from "../Men/StyledMenComponent";
 
 function menPage({ products }) {
-  const [noOfProdCarted, setNoOfProductCarted] = useState();
   const [localProducts, setLocalProducts] = useState([]);
   const [product, setProduct] = useState([]);
 
@@ -67,18 +66,14 @@ function menPage({ products }) {
         <Logo primary>ABC.</Logo>
         <NavIcons>
           {" "}
-          <NavElements user>
-            <FaUser />
-          </NavElements>
+          <NavElements user><FaUser /></NavElements>
           <NavElements>
-            <InputContainer>
-              <Input type="text" placeholder="search" />
-              <SearchContainer>
-                <FiSearch />
-              </SearchContainer>
+          <InputContainer> 
+              <Input type="text" placeholder='search'/>
+              <SearchContainer><FiSearch /></SearchContainer>
             </InputContainer>
-          </NavElements>
-          <Link href="../../../Cart" passHref>
+         </NavElements>
+         <Link href="../../../Cart" passHref>
             <CartIcon>
               <CartLogo>
                 <BsCart3 />
@@ -99,33 +94,29 @@ function menPage({ products }) {
           <NavElements>STYLES</NavElements>
         </NavList>
         <NavList>
-          <NavElements user>
-            <FaUser />
-          </NavElements>
+        <NavElements user><FaUser /></NavElements>
           <NavElements>
-            <InputContainer>
-              <Input type="text" placeholder="search" />
-              <SearchContainer>
-                <FiSearch />
-              </SearchContainer>
+          <InputContainer> 
+              <Input type="text" placeholder='search'/>
+              <SearchContainer><FiSearch /></SearchContainer>
             </InputContainer>
-          </NavElements>
+         </NavElements>
           <NavElements>
-            <Link href="../../../Cart" passHref>
+          <Link href="../../../Cart" passHref>
               <CartLogo>
                 <BsCart3 />
                 <NoOfCartedProducts primary>
                   {localProducts ? localProducts.length : 0}
                 </NoOfCartedProducts>
               </CartLogo>
-            </Link>
+          </Link>
           </NavElements>
         </NavList>
       </HeaderContainer>
-      <ImageWrapper>
+      <ImageWrapper category>
         <ImageSection primary>
           {products.map((product) => {
-            if (product.category === "women's clothing") {
+            if (product.category === "electronics") {
               return (
                 <ImageContainer primary key={product.id}>
                   <Image
@@ -137,17 +128,10 @@ function menPage({ products }) {
                   <ImageNumber>{product.category}</ImageNumber>
                   <ImageCaption primary>
                     {`${
-                      product.title.length > 20
-                        ? product.title.substring(0, 30) + "..."
+                      product.title.length > 30
+                        ? product.title.substring(0, 20) + "..."
                         : product.title
                     }`}
-                    <Ratings>
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStarHalfAlt />
-                    </Ratings>
                     <ImageCaption>${product.price}</ImageCaption>
                   </ImageCaption>
                   <CartButton onClick={() => handleItems(product)}>

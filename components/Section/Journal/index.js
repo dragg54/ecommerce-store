@@ -1,8 +1,8 @@
 import React from "react";
 import Artwork from "../../../assets/images/artwork.jpg";
-import { ImageCaption, ImageContainer, ImageNumber, Liner, LinerContainer } from "../StyledSection";
+import {ImageContainer, ImageNumber, Liner, LinerContainer } from "../StyledSection";
 import Image from "next/image";
-import { JournalContainer, JournalWrapper, StyledHeader } from "./StyledJournal";
+import { JournalCaption, JournalContainer, JournalWrapper, StyledHeader } from "./StyledJournal";
 import Shoe from "../../../assets/images/leather.jpg";
 import Bicycle from "../../../assets/images/bicycle.jpg";
 
@@ -15,26 +15,27 @@ function Journal() {
         <ImageContainer>
           <Image src={Artwork} width={400} height={500} alt="image" />
           <ImageNumber>111</ImageNumber>
-          <ImageCaption>
+          <JournalCaption>
             Discover the best artworks being released all over the world
-          </ImageCaption>
+          </JournalCaption>
         </ImageContainer>
         <ImageContainer>
           <Image src={Shoe} width={400} height={500} primary alt="image" />
           <ImageNumber>111</ImageNumber>
-          <ImageCaption>
+          <JournalCaption>
          Summer 19 Capsule
-          </ImageCaption>
+          </JournalCaption>
         </ImageContainer>
         <ImageContainer>
           <Image src={Bicycle} width={400} height={500} alt="image" />
           <ImageNumber>111</ImageNumber>
-          <ImageCaption>
+          <JournalCaption>
             Supreme teams with S&M for Retro 1995 BMX
-          </ImageCaption>
+          </JournalCaption>
         </ImageContainer>
       </JournalContainer>
-    </JournalWrapper><LinerContainer  secondary><Liner></Liner></LinerContainer>
+    </JournalWrapper>
+    <LinerContainer  secondary><Liner></Liner></LinerContainer>
    </>
   );
 }

@@ -26,42 +26,42 @@ const Section = () => {
   return (
     <>
       <ImageSection>
-        <ImageContainer>
-          <Image src={Men} width={400} height={500} alt="image" />
-          <ImageNumber>1</ImageNumber>
-          <Link href=".../../Men" passHref>
+        <Link href=".../../Men" passHref>
+          <ImageContainer>
+            <Image src={Men} width={400} height={500} alt="image" />
+            <ImageNumber>1</ImageNumber>
             <ImageCaption>MEN</ImageCaption>
-          </Link>
-        </ImageContainer>
-        <ImageContainer>
-          <Image src={Women} width={400} height={500} alt="image" />
-          <ImageNumber>2</ImageNumber>
-          <Link href=".../../Women" passHref>
-            <ImageCaption>WOMEN</ImageCaption>
-          </Link>
-        </ImageContainer>
-        <ImageContainer>
-          <Image src={Accessories} width={400} height={500} alt="image" />
-          <ImageNumber>3</ImageNumber>
-          <Link href="">
-            <ImageCaption>ACCESSORIES</ImageCaption>
-          </Link>
-        </ImageContainer>
-        <ImageContainer lastChild>
-        <Image src={Gadgets} width={400} height={500} alt="image" />
-        <ImageNumber>4</ImageNumber>
-        <Link href="">
-          <ImageCaption>GADGETS</ImageCaption>
+          </ImageContainer>
         </Link>
-      </ImageContainer>
+        <Link href=".../../Women" passHref>
+          <ImageContainer>
+            <Image src={Women} width={400} height={500} alt="image" />
+            <ImageNumber>2</ImageNumber>
+            <ImageCaption>WOMEN</ImageCaption>
+          </ImageContainer>
+        </Link>
+        <Link href=".../../Jewelries" passHref>
+          <ImageContainer>
+            <Image src={Accessories} width={400} height={500} alt="image" />
+            <ImageNumber>3</ImageNumber>
+            <ImageCaption>JEWELRIES</ImageCaption>
+          </ImageContainer>
+        </Link>
+        <Link href=".../../Gadgets" passHref>
+          <ImageContainer lastChild>
+            <Image src={Gadgets} width={400} height={500} alt="image" />
+            <ImageNumber>4</ImageNumber>
+            <ImageCaption>GADGETS</ImageCaption>
+          </ImageContainer>
+        </Link>
       </ImageSection>
       <LinerContainer>
         <Liner></Liner>
       </LinerContainer>
-      <NewProduct/>
+      <NewProduct />
       <BestPrice />
-      <SpringSale/>
-      <Journal/>
+      <SpringSale />
+      <Journal />
       <StayFeel />
       <Instagram />
       <FooterPicture />

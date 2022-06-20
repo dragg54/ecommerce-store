@@ -25,7 +25,7 @@ to{
 
 export const SpringSaleContainer = styled.div`  
     width:100%;
-    height: 350px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -41,13 +41,14 @@ export const SpringSaleContainer = styled.div`
 
     @media(max-width: 900px){
         height: 350px;
-        margin-top:10px
+        margin-top:-60px
     }
 
     @media(max-width: 768px){
         height: 320px;
         justify-content: space-between;
-        padding: 20px 50px
+        padding: 20px 50px;
+        margin-top: 10px
     }
 
     

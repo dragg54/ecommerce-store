@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NewInContainer, NewProductName } from "../NewProductSection/StyledNewProduct";
 
 export const StayFeelWrapper = styled.div`
-    margin: 30px auto;
+    margin: 60px auto;
     padding: 80px;
     width:100%;
     display: flex;
@@ -73,19 +73,16 @@ export const StayFeelContainer = styled.div`
 `
 
 export const StayFeelDescContainer = styled.div`
-    width:80%;
+    width:100%;
     position: relative;
     object-fit: contain;
     margin-bottom: 40px;
     margin-top: 62px;
-    border: 0.00001rem  solid #B9B7BD;
-    box-shadow: 2px 2px 2px gray;
     margin-right:50px;
-    padding:0.4%;
+
 
     @media(max-width: 1200px){
         margin-right: 40px;
-        padding:1%;
         width:100%;
     }
     @media(max-width: 900px){
@@ -94,6 +91,11 @@ export const StayFeelDescContainer = styled.div`
 
     @media(max-width: 768px){
         margin-top:80px
+    }
+
+    
+    @media(max-width: 480px){
+        margin-top:30px
     }
 `
 
@@ -110,11 +112,20 @@ align-self: flex-end;
 `
 
 export const PlayContainer = styled(NewInContainer)`
-    top:25%;
-    right:-17%;
+    top:9%;
+    right:-0%;
 
     @media(max-width: 1200px){
+        top:10%;
         right: -82px
+    }
+
+    @media(max-width: 600px){
+        right: -65px
+    }
+
+    @media(max-width: 468px){
+        display:none
     }
 
 `

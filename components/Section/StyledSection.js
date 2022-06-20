@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+
 export const ImageContainer = styled.div`
   width: ${(props) => (props.primary ? "200px" : "350px")};
   height: ${(props) => (props.primary ? "450px" : "450px")};
@@ -11,14 +12,14 @@ export const ImageContainer = styled.div`
 
 
   @media(max-width: 1200px) {
-    height: 300px;
-    width: 220px;
+    width: ${(props) => (props.primary ? "200px" : "350px")};
+  height: ${(props) => (props.primary ? "400px" : "300px")};
   }
 
   @media(max-width: 768px){
     height: 250px;
     width: 170px;
-    margin-bottom: 0;
+    margin: 45px 0;
   }
 
   @media(max-width: 600px){
@@ -27,7 +28,7 @@ export const ImageContainer = styled.div`
   @media(max-width: 480px){
     height: 140px;
     width: 120px;
-    margin: 0 4px;
+    margin: 15px 4px;
   }
 `
 export const ImageSection = styled.div`
@@ -66,7 +67,7 @@ export const ImageSection = styled.div`
 
   
   @media(max-width: 600px){
-   padding:30px 4px
+   padding:30px 4px;
   }
 
 
@@ -82,12 +83,12 @@ export const ImageCaption = styled.p`
   cursor: pointer;
   font-size: 18px;
   @media (max-width: 990px) {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   
   @media(max-width: 600px){
-    font-size: 9px;
+    font-size: 14px;
     margin-top: 0;
   }
 
@@ -95,12 +96,13 @@ export const ImageCaption = styled.p`
   @media (max-width: 480px) {
     height: ${(props) => (props.primary ? "40px" : "50px")};
     margin-bottom: 2px;
+    font-size: 14px;
   }
 `;
 
 export const ImageNumber = styled.p`
-  color: orange;
-  font-size: 12px;
+  color: #FF281B;
+  font-size: 0.6rem;
   font-weight: bolder;
 
   
@@ -113,36 +115,32 @@ export const ImageNumber = styled.p`
 
 export const LinerContainer = styled.div`
   width: 100%;
-  margin-top: ${props=>props.secondary? "60px" : "10px"};
+  margin-top: ${props=>props.secondary? "165px" :props.primary?"195px": "-3px"};
   opacity: 0.6;
 
   @media (max-width: 1200px) {
-    margin-top: ${props=>props.secondary? "150px" : "70px"};
+    margin-top: ${props=>props.secondary? "250px" :props.primary?"271px": "50px"};
   }
 
   @media(max-width: 1080px){
   }
 
   @media(max-width: 900px){
-   margin-top: ${props=>props.secondary? "80px" : "20px"};
+    margin-top: ${props=>props.secondary? "130px" :props.primary?"155px": "0px"};
   }
 
   @media(max-width:768px){
-    margin-top: ${props=>props.secondary? "100px" : "0px"};
+    margin-top: ${props=>props.secondary? "120px" :props.primary?"155px": "0px"};
     }
   
   @media(max-width: 600px){
-    margin-top: ${props=>props.secondary? "130px" : "0px"};
+   margin-top: ${props=>props.secondary? "130px" :props.primary?"195px": "25px"};
   }
 
   @media(max-width:480px){
-    margin-top: ${props=>props.secondary? "125px" : "25px"};
+    margin-top: ${props=>props.secondary? "132px" :props.primary?"195px": "42px"}
     }
-
-
-
-  
-`;
+`
 
 export const Liner = styled.div`
   width: 100%;

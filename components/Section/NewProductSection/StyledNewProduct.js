@@ -7,9 +7,10 @@ export const NewProductContainer = styled.div`
   padding: 90px 90px 30px 90px;
   position: relative;
 
-  @media (max-width: 1080px) {
-    padding: 30px 20px;
+  @media (max-width: 1200px){
+    padding: 30px 50px;
     margin-bottom: 90px;
+    margin-top:${(props) => (props.primary ? "40px" : "-35px")};
   }
 
   @media (max-width: 900px) {
@@ -18,15 +19,15 @@ export const NewProductContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-top:${(props) => (props.primary ? "90px" : "40px")}
+    margin-top:${(props) => (props.primary ? "30px" : "40px")}
   }
 
   @media (max-width: 600px) {
     margin-top: ${(props) => (props.primary ? "30px" : "90px")};
   }
 
-  @media (max-width: 480px) {
-    margin-top: ${(props) => (props.primary ? "30px" : "130px")};
+  @media (max-width: 468px) {
+    margin-top: ${(props) => (props.primary ? "50px" : "195px")};
     margin-bottom: ${(props) => (props.primary ? "30px" : "20px")};
     padding: 0px 20px;
   }
@@ -85,6 +86,7 @@ export const NewProductImageContainer = styled.div`
     margin-right: 0px;
     margin-bottom: 20px;
   }
+  
 `;
 
 export const NewProducImgDecrContainer = styled.div`
@@ -109,7 +111,7 @@ export const DescrContainer = styled.div`
   padding: 20px 7px 20px 7px;
   margin-top: px;
   border: 0.00001rem  solid #B9B7BD;
-  box-shadow: 2px 2px 2px gray;
+  box-shadow: 2px 2px 2px #746C70;
   margin-bottom: 0;
 
   
@@ -151,7 +153,7 @@ export const DescrHeader = styled.h4`
     font-size: 1.1rem;
     margin-bottom: 3px;
   }
-`;
+`
 
 export const Desc = styled.p`
   font-size: 0.65rem;
@@ -237,16 +239,16 @@ export const NewProductName = styled.h1`
 
   @media (max-width: 900px) {
     bottom: ${(props) => (props.primary ? "" : "-200px")};
-    font-size: 160px;
+    font-size:${(props) => (props.primary ? "9rem" : "8.25rem")};
     left: ${(props) => (props.primary ? "" : "-20px")};
     right: ${(props) => (props.primary ? "-255px" : "")};
-    top: ${(props) => (props.primary ? "-260px" : "")};
+    top: ${(props) => (props.primary ? "-240px" : "")};
   }
 
   @media (max-width: 768px) {
     right: ${(props) => (props.primary ? "-260px" : "")};
-    top: ${(props) => (props.primary ? "-250px" : "")};
-    font-size: ${(props) => (props.primary ? "150px" : "")};
+    top: ${(props) => (props.primary ? "-220px" : "")};
+    font-size: ${(props) => (props.primary ? "" : "")};
   }
 
   @media (max-width: 600px) {
@@ -265,10 +267,10 @@ export const NewProductName = styled.h1`
 export const BuyNowButton = styled.button`
   width: 100px;
   font-size: 0.56rem;
-  background-color: black;
+  background-color: #000;
   padding: 10px 8px;
-  color: white;
-  margin-top: 10px;
+  color: #ffffff;
+  margin-top:${props=>props.primary? "50px": "10px"};
   margin-bottom: ${props=>props.secondary? "8px": ""};
   border-color: ${(props) => (props.primary ? "" : "")};
 
@@ -280,7 +282,7 @@ export const BuyNowButton = styled.button`
   @media (max-width: 900px) {
     font-size: 0.6rem;
     width: 80px;
-    margin-top: 7px;
+    margin-top:${props=>props.primary? "40px": "7px"};
     padding-top: 10px
   }
 
@@ -288,20 +290,20 @@ export const BuyNowButton = styled.button`
   @media (max-width: 768px) {
     font-size: 0.6rem;
     width: 90px;
-    margin-top: 7px;
+    margin-top:${props=>props.primary? "50px": "10px"};
     padding-top: 10px
   }
 
   @media (max-width: 600px) {
     font-size: 0.58rem;
     width: 90px;
-    margin-top: 7px;
+    margin-top:${props=>props.primary? "50px":props.secondary? "40px":"25px"};
   }
 
   @media (max-width: 480px) {
     font-size: 0.54rem;
     width: 75px;
-    margin-top: 4px;
+    margin-top: ${props=> props.primary? "20px": "25px"};
     padding: 9px;
   }
 `;

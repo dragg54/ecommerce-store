@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiSearch, FiMenu } from "react-icons/fi";
+import { FaUser } from "react-icons/fa";
 import { BsCart3 } from "react-icons/bs";
 import Link from "next/link";
 
@@ -11,6 +12,8 @@ import {
   HeroContainer,
   HeroPrimaryCaption,
   HeroSecondaryCaption,
+  Input,
+  InputContainer,
   Logo,
   MenuIcon,
   NavElements,
@@ -18,6 +21,7 @@ import {
   NavList,
   NoOfCartedProducts,
   PrimaryButton,
+  SearchContainer,
 } from "./StyledHero";
 
 function Header() {
@@ -38,9 +42,13 @@ function Header() {
         <Logo>ABC.</Logo>
         <NavIcons>
           {" "}
-          <NavElements>MY ACCOUNT</NavElements>
+          <NavElements user><FaUser /></NavElements>
           <NavElements>
-            <FiSearch />
+          <InputContainer> 
+              <Input type="text" placeholder='search'/>
+              <SearchContainer><FiSearch /></SearchContainer>
+            </InputContainer>
+         
           </NavElements>
           <Link href="../../../Cart" passHref>
             <CartIcon>
@@ -63,9 +71,13 @@ function Header() {
           <NavElements>STYLES</NavElements>
         </NavList>
         <NavList>
-          <NavElements>MY ACCOUNT</NavElements>
+          <NavElements user><FaUser/></NavElements>
           <NavElements>
-            <FiSearch />
+            <InputContainer> 
+              <Input type="text" placeholder='search'/>
+              <SearchContainer><FiSearch /></SearchContainer>
+            </InputContainer>
+         
           </NavElements>
           <NavElements>
             <Link href="../../../Cart" passHref>
@@ -80,7 +92,7 @@ function Header() {
         </NavList>
       </HeaderContainer>
       <HeroCaptionContainer>
-        <HeroPrimaryCaption>TIS THE SEASON</HeroPrimaryCaption>
+        <HeroPrimaryCaption>TIS THE SEASON TO SHOP FOR YOUR WISHES</HeroPrimaryCaption>
         <HeroSecondaryCaption>
           SHOP OUR SELECTION OF UNIQUE GIFTS
           <br /> GUARANTEED TO MAKE YOU SMILE.

@@ -1,15 +1,24 @@
 import styled from 'styled-components'
-import { ImageContainer } from '../../component/Section/StyledSection'
+import { ImageContainer } from '../../components/Section/StyledSection'
 
 export const ImageWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media(max-width:768px){
+        margin-bottom:220px;
+    }
+
+     
+  @media(max-width: 600px){
+    margin-bottom: 200px;
+  }
 `
 
 export const CartButton = styled.button`
     width:100%;
-    padding: 8px 0 8px 0;
+    padding: 15px 0 15px 0;
     font-size: 15px;
     font-weight: bolder;
     background-color: #FF281B;
@@ -26,16 +35,18 @@ export const CartButton = styled.button`
 
     @media(max-width: 900px){
         visibility: visible;
-        padding: 8px
+        padding: 12px
   }
 
-  @media(max-width: 600px){
-        visibility: visible;
-        padding: 8px;
-        font-size:0.6rem
+    @media(max-width: 600px){
+            visibility: visible;
+            padding: 12px;
+            font-size:0.6rem;
+    }
+    
+    @media(max-width: 468px){
+            margin-top: 60px
   }
-
-
 `
 
 export const ProductContainer = styled.div`

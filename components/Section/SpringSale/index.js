@@ -10,7 +10,7 @@ function SpringSale() {
         <SpringSaleDescrContainer>
             <DescrHeader primary>SPRING SALE <br/>SHOP 50% OFF</DescrHeader>
             <Desc >
-                Discover a selection of neo-classics that underscore the modern spirit that Kim Jones has introduced to the House of Dior 
+                Discover a selection of neo-classics that underscore the modern spirit <br/>that Kim Jones has introduced to the House of Dior 
             </Desc>
             <BuyNowButton primary>BUY NOW</BuyNowButton>
           </SpringSaleDescrContainer>

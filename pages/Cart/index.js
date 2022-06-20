@@ -3,7 +3,7 @@ import {
   ImageCaption,
   ImageNumber,
   ImageSection,
-} from "../../component/Section/StyledSection";
+} from "../../components/Section/StyledSection";
 import {
   HeaderContainer,
   Logo,
@@ -14,7 +14,7 @@ import {
   MenuIcon,
   NavIcons,
   CartIcon,
-} from "../../component/Hero/StyledHero";
+} from "../../components/Hero/StyledHero";
 import { FiMenu, FiSearch, FiShoppingBag } from "react-icons/fi";
 import {
   CartButton,
